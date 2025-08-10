@@ -2,61 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Beat Store</title>
+  <title>Nelxxn Music | Beat Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      background: #111;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
       color: #fff;
-      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 30px 20px;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    header p {
+      color: #bbb;
+    }
+    .beat-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 20px;
     }
-
-    .beat {
-      background: #222;
+    .beat-card {
+      background-color: #1e1e1e;
       border: 1px solid #333;
-      margin: 20px auto;
-      padding: 15px;
-      width: 300px;
       border-radius: 10px;
+      margin: 15px;
+      width: 300px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
-
+    .beat-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .beat-card-content {
+      padding: 15px;
+    }
+    .beat-card-content h3 {
+      margin-top: 0;
+    }
     audio {
       width: 100%;
       margin-top: 10px;
     }
-
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 15px;
+      background-color: #ff4d4d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #e60000;
+    }
     footer {
-      margin-top: 50px;
+      text-align: center;
+      padding: 30px 10px;
+      background-color: #1a1a1a;
       color: #777;
+    }
+    @media screen and (max-width: 768px) {
+      .beat-card {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🔥 My Beat Store 🔥</h1>
-  <p>Listen to my beats and contact me to collab or buy!</p>
 
-  <!-- BEAT 1 -->
-  <div class="beat">
-    <h3>💥 Trap Heat</h3>
-    <audio controls>
-      <source src="trap-heat.mp3" type="audio/mpeg">
-      Your browser doesn't support audio.
-    </audio>
+<header>
+  <h1>Nelxxn Music 🎧</h1>
+  <p>Buy beats, collaborate, and vibe with 🔥 instrumentals</p>
+</header>
+
+<div class="beat-container">
+
+  <!-- BEAT CARD 1 -->
+  <div class="beat-card">
+    <img src="cover1.jpg" alt="Trap Beat Cover">
+    <div class="beat-card-content">
+      <h3>🔥 Trap Heat</h3>
+      <audio controls>
+        <source src="trap-heat.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <a class="btn" href="mailto:youremail@example.com?subject=Beat%20Purchase%20-%20Trap%20Heat">Buy / Collab</a>
+    </div>
   </div>
 
-  <!-- BEAT 2 -->
-  <div class="beat">
-    <h3>🌙 Midnight Vibes</h3>
-    <audio controls>
-      <source src="midnight-vibes.mp3" type="audio/mpeg">
-      Your browser doesn't support audio.
-    </audio>
+  <!-- BEAT CARD 2 -->
+  <div class="beat-card">
+    <img src="cover2.jpg" alt="Lofi Beat Cover">
+    <div class="beat-card-content">
+      <h3>🌙 Midnight Lofi</h3>
+      <audio controls>
+        <source src="midnight-lofi.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <a class="btn" href="mailto:youremail@example.com?subject=Beat%20Purchase%20-%20Midnight%20Lofi">Buy / Collab</a>
+    </div>
   </div>
 
-  <footer>
-    <p>📧 Email me: <a href="mailto:youremail@example.com" style="color:#aaa;">youremail@example.com</a></p>
-    <p>© 2025 My Beat Store</p>
-  </footer>
+</div>
+
+<footer>
+  <p>📩 Contact: <a href="mailto:youremail@example.com" style="color:#ccc;">youremail@example.com</a></p>
+  <p>© 2025 Nelxxn Music. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
